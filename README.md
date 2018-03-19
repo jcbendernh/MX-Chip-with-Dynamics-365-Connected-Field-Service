@@ -10,11 +10,9 @@ NOTE:  The Device ID is what gets registered to the IoT Hub, so we will need to 
 4.	This will open the <b>IoT Device</b> blade for this device.  Copy the <b>Connection string – primary key</b> to Notepad.  
 NOTE:  This is what defines your custom Device Id to the MX Chip
 5.	Download the latest <b>AZ3166-IoT-Central-1.0.0.bin</b> from GitHub at https://github.com/Microsoft/microsoft-iot-central-firmware/releases
-6.	Follow the instructions in the <b>Prepare the DevKit device</b> section at https://docs.microsoft.com/en-u/s/microsoft-iot-central/howto-connect-devkit.  When you get to step 7 and you configure the device in the web page at http://192.168.0.1/start make sure to copy your <b>Connection string – primary key</b> from Notepad into the <b>Device connection string</b> field and select the Temperature checkbox at a minimum.  You can select the other telemetry as well, but it is not needed for this specific scenario.<br>
-&nbsp;<img src="https://jq25qg.dm2302.livefilestore.com/y4mG_faJylzWG9bcN4fiO_DNQ0-FXxda3W9K3l1lxmp2uOzJ-drp2zUo5HPXJpriI9Lv3JBSv9btZjJDYz4KfyoUn97E_oTjugqa8qkTsMDi-T3YPiJHzddg8IB-GG0p5BNpUyEmsZKCdKJ72Ijx-w77BSBVJYXA0G_ctKrg2J30TvBuHq3CwBWvCyKUCdFQvi1UTfN8RGq5ANOlWjfHaEXiw?width=660&height=387&cropmode=none" width="660" height="387" />
-
-Click the <b>Configure Device</b> button and click the reset button on the MX Chip.
-
+6.	Follow the instructions in the <b>Prepare the DevKit device</b> section at https://docs.microsoft.com/en-u/s/microsoft-iot-central/howto-connect-devkit.  When you get to step 7 and you configure the device in the web page at http://192.168.0.1/start make sure to copy your <b>Connection string – primary key</b> from Notepad into the <b>Device connection string</b> field and select the Temperature checkbox at a minimum.  You can select the other telemetry as well, but it is not needed for this specific scenario.<br>&nbsp;<br>
+<img src="https://jq25qg.dm2302.livefilestore.com/y4mG_faJylzWG9bcN4fiO_DNQ0-FXxda3W9K3l1lxmp2uOzJ-drp2zUo5HPXJpriI9Lv3JBSv9btZjJDYz4KfyoUn97E_oTjugqa8qkTsMDi-T3YPiJHzddg8IB-GG0p5BNpUyEmsZKCdKJ72Ijx-w77BSBVJYXA0G_ctKrg2J30TvBuHq3CwBWvCyKUCdFQvi1UTfN8RGq5ANOlWjfHaEXiw?width=660&height=387&cropmode=none" width="660" height="387" /><br>&nbsp;<br><br>&nbsp;<br>
+Click the <b>Configure Device</b> button and click the reset button on the MX Chip.<br>&nbsp;<br>
 NOTE:  If you do not get the Device connection string field in the window above, try doing a hard reset on the MX CHIP by holding down both the A & B buttons for a few seconds.
 
 7.	Now you should see telemetry coming from your custom named MX chip.  You can view this by downloading the <a href="https://github.com/Azure/azure-iot-sdk-csharp/tree/master/tools/DeviceExplorer" target="_blank">Azure Device Explorer Twin</a> and pasting the IoT Hub Connection Sting into the Configuration tab.  Once you have done so, go to the Data tab and select your device and click Monitor…<br>
