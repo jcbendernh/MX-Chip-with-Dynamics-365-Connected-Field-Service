@@ -25,14 +25,14 @@ Since the MX Chip firmware for IoT Central device sends telemetry a little diffe
 <img src="https://fe2rxq.dm2302.livefilestore.com/y4mgArnk1PjCTNyEPiWaWeH4W_WE5tBS8EVgfQvK1kqIrDs5m6s92Gc8foBydiK6cdWz2W7JcXVwaTtEPLgcbr56NeC57K5i_puvqtykJ-Nets4rNk-2JO1vav0OoJVPNQ5w3KCHB-EdxIbxdysd0RGiAaZR820if2gYOYIVZre-BSgSE6T4YNApXRtIqwjUuboA7PnIQ_1powMtL_5VvNg2g?width=256&height=203&cropmode=none" width="256" height="203" /><br>
 
 9.	Next, we need to stop the Stream Analytics job in order to modify the query.  From the overview blade of the Stream Analytics job, click the <b>Stop</b> button at the top.  Typically, it takes about 30-90 seconds for the Stream Analytics job to stop. 
-10.	Once stopped, click on the <b>Query</b> blade to open the Query window.  Highlight all text in the window and delete.  Copy the contents from the <b>IoTStream to AlertsQueue with Custom MX Chip Name SQL</b> script into the Query Editor window and click Save.
+10.	Once stopped, click on the <b>Query</b> blade to open the Query window.  Highlight all text in the window and delete.  Copy the contents from the <b>IoTStream to AlertsQueue with Custom MX Chip Name SQL</b> script in this repository into the Query Editor window and click Save.
 11.	Once the query has saved, go back to the <b>Overview</b> blade and click <b>Start</b>.
 12.	Put your finger on the temp sensor of the MX Chip to manipulate the temperature so it is hotter than the threshold.  You should now start to see IoT Alerts showing up in Dynamics 365.
 13.	If you activated the Power BI integration, we need to also manipulate the Stream Analytics job with the <b>output to PowerBISQL</b>.  This can be identified by choosing our Connected Field Service Resource Group within the Azure portal and sort the listing by Type.  Open the other Stream Analytics job in your listing and verify that the output states <b>PowerBISQL</b>…<br>&nbsp;<br>
 <img src="https://r8e4aa.dm2302.livefilestore.com/y4mGERWQxyG6eUQw6ERfqSo54LjXDBBqkwWWCPQXBQ16NgJmS_oy54XYjQjnwIXDNSTyhjMjxX0v-oBMXGDdov-todkCvYvTiA1Tl6oRwQLcBNgv8kNM_bvHEp8krdbmy5D9wLBb9whpPvceCKuxuHcGI31BYCM04OETD3FK-7GmNAwXStw8pUH0WAcmAAGYvctgO2PGUb3UmkE2JFHECq7sg?width=256&height=207&cropmode=none" width="256" height="207" /><br>
 
 14.	Just as before, we need to stop the Stream Analytics job in order to modify the query.  From the overview blade of the Stream Analytics job, click the <b>Stop</b> button at the top.  
-15.	Once stopped, click on the <b>Query</b> blade to open the Query window.  Highlight all text in the window and delete.  Copy the contents from the <b>IoTStream to PowerBISQL with Custom MX Chip Name</b> SQL script into the Query Editor window and click <b>Save</b>.
+15.	Once stopped, click on the <b>Query</b> blade to open the Query window.  Highlight all text in the window and delete.  Copy the contents from the <b>IoTStream to PowerBISQL with Custom MX Chip Name</b> SQL script in this repository into the Query Editor window and click <b>Save</b>.
 16.	Once the query has saved, go back to the <b>Overview</b> blade and click <b>Start</b>.
 17.	You should now see the data in the Azure SQL database and the <a href="https://www.microsoft.com/en-us/download/details.aspx?id=54298" target="_blank">Power BI Report Template for Connected Field Service</a> that uses that database as a source.
 
