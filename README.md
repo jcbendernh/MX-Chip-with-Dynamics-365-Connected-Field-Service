@@ -6,7 +6,7 @@ Recently we released a firmware update for the MX Chip that exposes all the tele
 1.	Go into Dynamics 365 and add your custom device.  To do so, within D365, go to <b>Internet of Things >> Registered Devices</b> and click <b>+NEW</b> to add a new device.  Give it a distinct name and Device ID.
 NOTE:  The Device ID is what gets registered to the IoT Hub, so we will need to remember this for future steps.
 2.	After the record has saved, click the <b>REGISTER</b> button on the toolbar.  Once the registration process has completed, your device should now show a Registration <b>Status = Registered</b>.
-3.	Next, we need to capture our Device Connection string.  To do so, go into the Azure portal and under your Connected Field Service resource group, select your <b>IoT Hub</b> and once loaded, click on the <b>IoT Devices</b> blade and select your newly registered <b>Device ID</b>.
+3.	Next, we need to capture our Device Connection string.  To do so, go into the <a href="https://portal.azure.com" target="_blank"> Azure portal</a> and under your Connected Field Service resource group, select your <b>IoT Hub</b> and once loaded, click on the <b>IoT Devices</b> blade and select your newly registered <b>Device ID</b>.
 4.	This will open the <b>IoT Device</b> blade for this device.  Copy the <b>Connection string – primary key</b> to Notepad.  
 NOTE:  This is what defines your custom Device Id to the MX Chip
 5.	Download the latest <b>AZ3166-IoT-Central-1.0.0.bin</b> from GitHub at https://github.com/Microsoft/microsoft-iot-central-firmware/releases
@@ -17,10 +17,10 @@ Click the <b>Configure Device</b> button and click the reset button on the MX Ch
 
 NOTE:  If you do not get the Device connection string field in the window above, try doing a hard reset on the MX CHIP by holding down both the A & B buttons for a few seconds.
 
-7.	Now you should see telemetry coming from your custom named MX chip.  You can view this by downloading the Azure Device Explorer Twin and pasting the IoT Hub Connection Sting into the Configuration tab.  Once you have done so, go to the Data tab and select your device and click Monitor…
+7.	Now you should see telemetry coming from your custom named MX chip.  You can view this by downloading the <a href="https://github.com/Azure/azure-iot-sdk-csharp/tree/master/tools/DeviceExplorer" target="_blank">Azure Device Explorer Twin</a> and pasting the IoT Hub Connection Sting into the Configuration tab.  Once you have done so, go to the Data tab and select your device and click Monitor…
  
 
-NOTE:  The IoT Hub Connection string can be obtained by going into the Azure portal and under your Connected Field Service resource group, select your IoT Hub and click on the <b>Shared access polices</b> blade.  Once it is loaded, click the <b>iothubowner</b> policy and copy the <b>Connection string-primary key</b>.
+NOTE:  The IoT Hub Connection string can be obtained by going into the <a href="https://portal.azure.com" target="_blank">Azure portal</a> and under your Connected Field Service resource group, select your IoT Hub and click on the <b>Shared access polices</b> blade.  Once it is loaded, click the <b>iothubowner</b> policy and copy the <b>Connection string-primary key</b>.
 
 Since the MX Chip firmware for IoT Central device sends telemetry a little different than the web simulator or other devices, we will need to modify our queries for the Stream Analytics jobs.  If you enabled the Power BI integration during the Connected Field Service setup, you will have 2 Stream Analytics jobs in your Connected Field Service resource group.  The following steps show how to configure these jobs so that both the MX Chip and the web simulators can send data simultaneously via the IoT Hub and ultimately into Dynamics.
 
@@ -37,7 +37,7 @@ Since the MX Chip firmware for IoT Central device sends telemetry a little diffe
 14.	Just as before, we need to stop the Stream Analytics job in order to modify the query.  From the overview blade of the Stream Analytics job, click the <b>Stop</b> button at the top.  
 15.	Once stopped, click on the <b>Query</b> blade to open the Query window.  Highlight all text in the window and delete.  Copy the contents from the <b>IoTStream to PowerBISQL with Custom MX Chip Name</b> SQL script into the Query Editor window and click <b>Save</b>.
 16.	Once the query has saved, go back to the <b>Overview</b> blade and click <b>Start</b>.
-17.	You should now see the data in the Azure SQL database and the Power BI Report Template for Connected Field Service that uses that database as a source.
+17.	You should now see the data in the Azure SQL database and the <a href="https://www.microsoft.com/en-us/download/details.aspx?id=54298" target="_blank">Power BI Report Template for Connected Field Service</a> that uses that database as a source.
 
 Now that we have configured data to flow from the device to Dynamics 365.  Let’s look how we can send a signal back to the device from Dynamics 365.  With the MX Chip IoT Central Firmware, there are a few out of the box methods that we can call on the device.  For this example I am highlighting the following….
 
