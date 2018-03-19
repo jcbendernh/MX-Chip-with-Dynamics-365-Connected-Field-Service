@@ -43,10 +43,8 @@ Now that we have configured data to flow from the device to Dynamics 365.  Let�
 
 <b>Have a Message Display on the device</b>
 
-18.	Bring up your IoT Device record in Dynamics 365 by going to <b>Internet of Things >> Registered Devices</b> and open your <b>IoT Device</b>.  In the toolbar, click the <b>CREATE COMMAND</b> button on the toolbar.  In the New IoT Device Command window, fill in a name and then copy the following into the MESSAGE TO SEND FIELD…
-
-{"methodName": "message","payload": {"text": "Message Received from Operator"}}
-
+18.	Bring up your IoT Device record in Dynamics 365 by going to <b>Internet of Things >> Registered Devices</b> and open your <b>IoT Device</b>.  In the toolbar, click the <b>CREATE COMMAND</b> button on the toolbar.  In the New IoT Device Command window, fill in a name and then copy the following into the MESSAGE TO SEND FIELD…<br>&nbsp;<br>
+{"methodName": "message","payload": {"text": "Message Received from Operator"}}<br>&nbsp;<br>
 and click the <b>SEND & CLOSE</b> button on the toolbar.   Your message should show on the screen of the MX Chip shortly. It can take upwards of a minute to take effect.
 
 <b>Show Rainbow Lights on the Device</b>
