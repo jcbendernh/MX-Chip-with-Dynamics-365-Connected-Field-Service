@@ -1,5 +1,5 @@
 # MX-Chip-with-Dynamics-365-Connected-Field-Service
-This walks you through how to integrated an MX Chip with the OOB Dynamics 365 Connected Field Service Demo.
+This walks you through how to integrate an MX Chip with the OOB Dynamics 365 Connected Field Service Demo.
 
 Recently we released a firmware update for the MX Chip that exposes all the telemetry on the chip and integrates it with IoT Central.  However, we can also use that firmware for the chip to interact with the traditional IoT Hub without IoT Central.  This makes it very easy to get the chip integrated with the Dynamics 365 Connected Field Service demonstration.  Thus, if you already have the Connected Field Service demonstration running within Azure IoT and Dynamics 365, you can use the following steps to integrate the MX Chip to interact with Dynamics 365 for both sending and receiving messages.  For more information on the MX Chip, click here.
  
