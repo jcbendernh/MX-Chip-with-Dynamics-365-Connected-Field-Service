@@ -49,9 +49,6 @@ and click the <b>SEND & CLOSE</b> button on the toolbar.   Your message should s
 
 <b>Show Rainbow Lights on the Device</b>
 
-19.	Bring up your IoT Device record in Dynamics 365 by going to <b>Internet of Things >> Registered Devices</b> and open your <b>IoT Device</b>.  In the toolbar, click the <b>CREATE COMMAND</b> button on the toolbar.  In the New IoT Device Command window, fill in a name and then copy the following into the MESSAGE TO SEND FIELD…
-
-{"methodName": "rainbow","payload": {"cycles": "5"}}  
-
+19.	Bring up your IoT Device record in Dynamics 365 by going to <b>Internet of Things >> Registered Devices</b> and open your <b>IoT Device</b>.  In the toolbar, click the <b>CREATE COMMAND</b> button on the toolbar.  In the New IoT Device Command window, fill in a name and then copy the following into the MESSAGE TO SEND FIELD…<br>&nbsp;<br>
+{"methodName": "rainbow","payload": {"cycles": "5"}}<br>&nbsp;<br>
 and click the <b>SEND & CLOSE</b> button on the toolbar.   The LED light on the left of the MX Chip should cycle through rainbow lights shortly. It can take upwards of a minute to take effect.
-
