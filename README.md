@@ -36,7 +36,7 @@ Since the MX Chip firmware for IoT Central device sends telemetry a little diffe
 16.	Once the query has saved, go back to the <b>Overview</b> blade and click <b>Start</b>.
 17.	You should now see the data in the Azure SQL database and the <a href="https://www.microsoft.com/en-us/download/details.aspx?id=54298" target="_blank">Power BI Report Template for Connected Field Service</a> that uses that database as a source.
 
-Now that we have configured data to flow from the device to Dynamics 365.  Let’s look how we can send a signal back to the device from Dynamics 365.  With the MX Chip IoT Central Firmware, there are a few out of the box methods that we can call on the device.  For this example I am highlighting the following….
+Now that we have configured data to flow from the device to Dynamics 365.  Let’s look how we can send a signal back to the device from Dynamics 365.  With the MX Chip IoT Central Firmware, there are two out-of-the-box methods that we can call on the device…
 
 <b>Have a Message Display on the device</b>
 
