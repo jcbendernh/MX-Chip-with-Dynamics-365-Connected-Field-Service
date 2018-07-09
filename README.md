@@ -9,7 +9,7 @@ NOTE:  The Device ID is what gets registered to the IoT Hub, so we will need to 
 3.	Next, we need to capture our Device Connection string.  To do so, go into the <a href="https://portal.azure.com" target="_blank"> Azure portal</a> and under your Connected Field Service resource group, select your <b>IoT Hub</b> and once loaded, click on the <b>IoT Devices</b> blade and select your newly registered <b>Device ID</b>.
 4.	This will open the <b>IoT Device</b> blade for this device.  Copy the <b>Connection string – primary key</b> to Notepad.  
 NOTE:  This is what defines your custom Device Id to the MX Chip
-5.	Download the Dec 2017 release of the <b>AZ3166-IoT-Central-1.0.0.bin</b> file from GitHub at https://github.com/Microsoft/microsoft-iot-central-firmware/releases.<br>  <b> NOTE: </b>Do not download the latest release as it has an issue with receiving the methodName commands.
+5.	Download the <b>v.1.1.0 release</b> of the firmware which is the <b>AZ3166-IoT-Central-1.0.0.bin</b> file from GitHub at https://github.com/Microsoft/microsoft-iot-central-firmware/releases.<br>  <b> NOTE: </b>Do not download the latest release as it has an issue with receiving the Method Name commands.
 6.	Follow the instructions in the <b>Prepare the DevKit device</b> section at https://docs.microsoft.com/en-us/microsoft-iot-central/howto-connect-devkit.  When you get to step 7 and you configure the device in the web page at http://192.168.0.1/start make sure to copy your <b>Connection string – primary key</b> from Notepad into the <b>Device connection string</b> field and select the Temperature checkbox at a minimum.  You can select the other telemetry as well, but it is not needed for this specific scenario.<br>&nbsp;<br>
 <img src="https://jq25qg.dm2302.livefilestore.com/y4mG_faJylzWG9bcN4fiO_DNQ0-FXxda3W9K3l1lxmp2uOzJ-drp2zUo5HPXJpriI9Lv3JBSv9btZjJDYz4KfyoUn97E_oTjugqa8qkTsMDi-T3YPiJHzddg8IB-GG0p5BNpUyEmsZKCdKJ72Ijx-w77BSBVJYXA0G_ctKrg2J30TvBuHq3CwBWvCyKUCdFQvi1UTfN8RGq5ANOlWjfHaEXiw?width=660&height=387&cropmode=none" width="660" height="387" /><br>&nbsp;<br>
 Click the <b>Configure Device</b> button and click the reset button on the MX Chip.<br>&nbsp;<br>
@@ -38,7 +38,8 @@ Since the MX Chip firmware for IoT Central device sends telemetry a little diffe
 
 Now that we have configured data to flow from the device to Dynamics 365.  Let’s look how we can send a signal back to the device from Dynamics 365.  With the MX Chip IoT Central Firmware, there are two out-of-the-box methods that we can call on the device…
 
-<b>Have a Message Display on the device</b>
+<b>Have a Message Display on the device</b><br>
+<b>NOTE:</b>  This only works with the <b>v.1.1.0</b> of the firmware.  Later firmware releases use different Method Names and are not compatible with these commands.
 
 18.	Bring up your IoT Device record in Dynamics 365 by going to <b>Internet of Things >> Registered Devices</b> and open your <b>IoT Device</b>.  In the toolbar, click the <b>CREATE COMMAND</b> button on the toolbar.  In the New IoT Device Command window, fill in a name and then copy the following into the MESSAGE TO SEND FIELD…<br>&nbsp;<br>
 {"methodName": "message","payload": {"text": "Message Received from Operator"}}<br>&nbsp;<br>
